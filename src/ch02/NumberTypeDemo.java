@@ -3,10 +3,11 @@ package ch02;
 public class NumberTypeDemo {
 
 	public static void main(String[] args) {
+
 		// 소리가 1시간(60 * 60 초) 동안 가는 거리
 		int mach;
 		int distance;
-		mach = 340.0f; // double 또는 float 을 int 로 명시적(강제) 형변환
+		mach = (int) 340.0f; // double 또는 float 을 int 로 명시적(강제) 형변환
 		distance = 60 * 60 * mach;
 		System.out.printf("소리가 1시간(60 * 60 초) 동안 가는 거리는 %d 입니다. \n", distance);
 
