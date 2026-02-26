@@ -48,8 +48,9 @@ public class ConditionDemo {
 		}
 
 		// 삼항(조건)연산자
-		String result = (res == 0) ? "짝수입니다" : "홀수입니다.";
+		String result = (res == 0) ? "짝수입니다." : "홀수입니다.";
 		System.out.println(result);
+
 	}
 
 }
