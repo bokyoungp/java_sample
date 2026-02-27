@@ -14,7 +14,7 @@ public class Ex2 {
 		Scanner in = new Scanner(System.in);
 		// 변수 선언 부 위치 옮기기
 		int dan = 0;
-//		while (true) {
+//		2true) {
 //			System.out.print("구구단 몇단을 출력할까요 ? : ");
 //
 //			// 변수 선언 부 위치 옮기기
