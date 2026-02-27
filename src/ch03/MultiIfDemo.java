@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class MultiIfDemo {
 
+	public static int aa = 0;
+
 	public static void main(String[] args) {
 		// 시험점수를 입력을 받아서 해당 점수가 A, B, C, F 인지 학점을 출력해주는 프로그램을 작성하라.
 		// A : 90~100, B:80~89, C:70~79, F:0~69, 0~100 범위를 벗어나는 점수가 들어오면 유효하지 않은 점수가
