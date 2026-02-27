@@ -38,42 +38,24 @@ public class Ex1 {
 
 		// 함수(메서드)를 활용한 프로그램의 재활용, 유지보수성을 높이기 위해
 		// 1부터 3까지의 합을 구하는 프로그램
-		int sum = 0;
-//		sum += 1; // 0 + 1 => 1
-//		sum += 2; // 1 + 2 => 3
-//		sum += 3; // 3 + 3 => 6
-
-		for (int j = 1; j <= 3; j++) {
-			sum += j;
-		}
-		System.out.println(sum);
+		System.out.println(sum(1, 3));
 
 		// 4부터 6까지의 합을 구하는 프로그램
-
-		sum = 0;
-//		sum += 4; // 0 + 4 => 4
-//		sum += 5; // 4 + 5 => 9
-//		sum += 6; // 9 + 6 => 15
-
-		for (int j = 4; j <= 6; j++) {
-			sum += j;
-		}
-		System.out.println(sum);
+		System.out.println(sum(4, 6));
 
 		// 7부터 9까지의 합을 구하는 프로그램
 		System.out.println(sum(7, 9));
+
+		return;
 	} // End of main method
 
 	public static int sum(int i1, int i2) {
 		int sum = 0;
-//		sum += i1; 
-//		sum += i1+1; 
-//		sum += i2; 
 
 		for (int j = i1; j <= i2; j++) {
 			sum += j;
 		}
 		return sum;
-	}
+	} // end of sum method
 
 } // End of Ex1 class
