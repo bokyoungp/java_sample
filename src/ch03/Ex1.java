@@ -19,6 +19,12 @@ public class Ex1 {
 			System.out.printf("%2d helloworld\n", (i + 1));
 			i++;
 		}
+		// do-while 문으로 변경
+		i = 0;
+		do {
+			System.out.printf("%2d helloworld\n", (i + 1));
+			i++;
+		} while (i < 10);
 
 //		for (;;) {  // 무한 루트, 무한 반복문
 //			System.out.println(totalAmount);

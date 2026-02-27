@@ -14,13 +14,32 @@ public class Ex2 {
 		Scanner in = new Scanner(System.in);
 		// 변수 선언 부 위치 옮기기
 		int dan = 0;
-		while (true) {
+//		while (true) {
+//			System.out.print("구구단 몇단을 출력할까요 ? : ");
+//
+//			// 변수 선언 부 위치 옮기기
+//			dan = in.nextInt();
+//
+//			// while 문 종료조건 추가하기
+//			if (dan == -1)
+//				break;
+//
+//			if (dan < 2 || dan > 9) {
+//				System.out.println("2단부터 9단까지만 출력할 수 있습니다.");
+//			} else {
+//				for (int i = 1; i <= 9; i++) {
+//					// System.out.println(dan + " X " + i + " = " + (dan * i));
+//					System.out.printf("%d X %d = %2d\n", dan, i, dan * i);
+//				}
+//			}
+//		}
+
+		do {
 			System.out.print("구구단 몇단을 출력할까요 ? : ");
 
 			// 변수 선언 부 위치 옮기기
 			dan = in.nextInt();
 
-			// while 문 종료조건 추가하기
 			if (dan == -1)
 				break;
 
@@ -32,7 +51,8 @@ public class Ex2 {
 					System.out.printf("%d X %d = %2d\n", dan, i, dan * i);
 				}
 			}
-		}
+		} while (dan != -1);
+
 		System.out.println("프로그램을 종료합니다.");
 
 //		System.out.println(dan + " X 1 = " + (dan * 1));
