@@ -3,25 +3,25 @@ package ch04;
 public class StaticInstanceVarDemo {
 
 	public static void main(String[] args) {
-		Circle2 c2 = new Circle2();
 		Circle2.printStaticInfo();
-		Circle2.numOfCircle++;
+
+		Circle2 c2 = new Circle2(1.0);
 		Circle2.printStaticInfo();
 
 		c2.printInfo();
 		c2.radius = 1.0;
 		c2.printInfo();
 
-		Circle2 c3 = new Circle2();
-		Circle2.numOfCircle++;
+		Circle2 c3 = new Circle2(2.0);
+
 		Circle2.printStaticInfo();
 
-		Circle2 c4 = new Circle2();
-		Circle2.numOfCircle++;
+		Circle2 c4 = new Circle2(3.0);
+
 		Circle2.printStaticInfo();
 
-		Circle2 c5 = new Circle2();
-		Circle2.numOfCircle++;
+		Circle2 c5 = new Circle2(4.0);
+
 		Circle2.printStaticInfo();
 
 		System.out.printf("%d %d %d %d", c2.numOfCircle, c3.numOfCircle, c4.numOfCircle, c5.numOfCircle);
@@ -31,6 +31,10 @@ public class StaticInstanceVarDemo {
 
 class Circle2 {
 	// 생성자
+	public Circle2(double radius) {
+		this.radius = radius;
+		numOfCircle++;
+	}
 
 	// 필드 = 변수
 	// 클래스 변수
