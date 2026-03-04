@@ -1,10 +1,45 @@
 package exercise;
 
+import java.util.Scanner;
+
 public class BankApplication {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		String template = """
+				----------------------------------------------------
+				1. 계좌 생성 | 2. 계좌 목록 | 3. 예금 | 4. 출금 | 5. 종료
+				----------------------------------------------------
+				선택 > """;
+		String menu = "";
+		int money;
+		while (true) {
+			System.out.println(template);
+			menu = in.nextLine();
+			if (menu.equals("5"))
+				break;
+			switch (menu) {
+			case "1" -> createAccount(); // ==> 함수로 리팩토링
+			case "2" -> accountInquiry();
+			case "3" -> depositProcess();
+			case "4" -> System.out.println("출금 처리 중...");
+			default -> System.out.println("메뉴 확인 바랍니다.");
+			}
+		}
+		System.out.println("프로그램 종료");
 
+	}
+
+	static void createAccount() {
+		System.out.println("계좌 생성 처리 중...");
+	}
+
+	static void accountInquiry() {
+		System.out.println("계좌 목록 처리 중...");
+	}
+
+	static void depositProcess() {
+		System.out.println("예금 처리 중...");
 	}
 
 }
