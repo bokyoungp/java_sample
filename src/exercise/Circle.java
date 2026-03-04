@@ -22,4 +22,22 @@ public class Circle {
 	void printInfo() {
 		System.out.printf("%s , 크기가 %.1f 인 공이 %d 개(%d) 생성되었습니다. \n", color, radius, numOfCircles, numCircle);
 	}
+
+	void instanceMethod() {
+		this.printInfo();
+		printInfo();
+		staticMethod();
+		staticMethod2();
+	}
+
+	static void staticMethod() {
+		staticMethod2();
+		// instanceMethod();
+		numOfCircles++;
+		// numCircle++;
+	}
+
+	static void staticMethod2() {
+
+	}
 }
