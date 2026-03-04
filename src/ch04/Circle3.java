@@ -3,8 +3,7 @@ package ch04;
 public class Circle3 {
 	// 생성자 오버로딩
 	public Circle3() {
-		color = "red";
-		radius = 1.0;
+		this("red", 1.0);
 	}
 
 	public Circle3(String color, double radius) {
@@ -13,13 +12,13 @@ public class Circle3 {
 	}
 
 	public Circle3(String color) {
-		this.color = color;
-		this.radius = 1.0;
+		// this.color = "blue";
+		this(color, 1.0);
+		this.color = "blue";
 	}
 
 	public Circle3(double radius) {
-		this.color = "red";
-		this.radius = radius;
+		this("red", radius);
 	}
 
 	String color;
