@@ -14,13 +14,14 @@ public class BankApplication {
 				""";
 		String menu = "";
 		int money;
+		Account account = null;
 		while (true) {
 			System.out.println(template);
 			menu = in.nextLine();
 			if (menu.equals("5"))
 				break;
 			switch (menu) {
-			case "1" -> createAccount(); // ==> 함수로 리팩토링
+			case "1" -> createAccount(in, account); // ==> 함수로 리팩토링
 			case "2" -> accountInquiry();
 			case "3" -> depositProcess();
 			case "4" -> System.out.println("출금 처리 중...");
@@ -31,8 +32,11 @@ public class BankApplication {
 
 	}
 
-	static void createAccount() {
+	static void createAccount(Scanner in, Account account) {
 		System.out.println("계좌 생성 처리 중...");
+		// 사용자로부터 입력
+		in.nextLine();
+		account = new Account("111-111", "홍길동", 10000);
 	}
 
 	static void accountInquiry() {
