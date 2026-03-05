@@ -6,17 +6,17 @@ public class BankApplication {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		String template = """
-				----------------------------------------------------
-				1. 계좌 생성 | 2. 계좌 목록 | 3. 예금 | 4. 출금 | 5. 종료
-				----------------------------------------------------
-				선택 >
-				""";
+//		String template = """
+//				----------------------------------------------------
+//				1. 계좌 생성 | 2. 계좌 목록 | 3. 예금 | 4. 출금 | 5. 종료
+//				----------------------------------------------------
+//				선택 >
+//				""";
 		String menu = "";
 		int money;
 		Account account = null;
 		while (true) {
-			System.out.println(template);
+			// System.out.println(template);
 			menu = in.nextLine();
 			if (menu.equals("5"))
 				break;

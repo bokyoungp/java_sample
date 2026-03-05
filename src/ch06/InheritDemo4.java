@@ -8,3 +8,14 @@ public class InheritDemo4 {
 	}
 
 }
+
+class Good {
+}
+
+class Better extends Good {
+}
+
+final class Best extends Better {
+}
+
+//class MostBest extends Best {}
