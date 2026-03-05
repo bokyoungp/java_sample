@@ -12,11 +12,11 @@ public class CountCharEx {
 		// 문자열 s에 포함된 문자 c의 개수를 반환하도록 이 메서드를 구현하시오.
 		// 힌트 1 : String 클래스가 제공하는 charAt() 메서드를 이용하시오.
 		// 힌트 2 : String 클래스가 제공하는 toLowerCase() 나 toUpperCase() 를 사용하시오.
-		String upper = s.toUpperCase();
-		String lower = s.toLowerCase();
+		// 힌트 3 : String.valueOf() 로 문자열로 변경한 후 equalsIgnoreCase 로 비교하기
+		String sc = String.valueOf(c);
 		int count = 0;
 		for (int i = 0; i < s.length(); i++) {
-			if (upper.charAt(i) == c || lower.charAt(i) == c) {
+			if (String.valueOf(s.charAt(i)).equalsIgnoreCase(sc)) {
 				count++;
 			}
 		}
