@@ -9,9 +9,9 @@ public class SumVarialeLengthEx {
 		System.out.println(sum(1, 2, 3, 4, 5)); // 14
 	}
 
-	static int sum(int i1, int... i2) {
+	static int sum(int i1, int... arr) {
 		int sum = 0;
-		for (int i : i2) {
+		for (int i : arr) {
 			sum += i;
 		}
 		return sum;

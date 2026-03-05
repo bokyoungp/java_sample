@@ -20,6 +20,7 @@ public class BeforeEnumDemo {
 		}
 
 		System.out.println(Gender.MALE.compareTo(Gender.FEMALE));
+		System.out.println(person.gender);
 	}
 }
 
@@ -31,7 +32,22 @@ class Person {
 }
 
 enum Gender {
-	MALE, FEMALE
+//	MALE, FEMALE
+	MALE("Man"), FEMALE("Woman");
+
+	// 필드
+	String s;
+
+	// 생성자
+	Gender(String s) {
+		this.s = s;
+	}
+
+	// 메서드
+	@Override
+	public String toString() {
+		return s;
+	}
 }
 
 enum Direction {
