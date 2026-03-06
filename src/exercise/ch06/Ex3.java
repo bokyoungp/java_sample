@@ -7,9 +7,16 @@ public class Ex3 {
 		Person[] persons = new Person[3];
 		persons[0] = new Person(22, "길동이");
 		persons[1] = new Student(23, "황진이", "100");
+		persons[2] = new ForeignStudent(30, "Amy", "200", "U.S.A");
 
+		// ==> for-each 로 변경하기
 		persons[0].show();
 		persons[1].show();
+		persons[2].show();
+
+		for (Person person : persons) {
+			person.show();
+		}
 
 	}
 
@@ -84,6 +91,12 @@ class ForeignStudent extends Student {
 
 	public void setNationality(String nationality) {
 		this.nationality = nationality;
+	}
+
+	@Override
+	public void show() {
+		System.out.println("사람[이름:" + super.getName() + ", 나이 : " + super.getAge() + ", 학번 : " + super.getStudentNo()
+				+ ", 국적 : " + nationality + "]");
 	}
 
 	// 생성자 - 모든 필드를 초기화하는 생성자
