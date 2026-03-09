@@ -28,7 +28,8 @@ class Book implements Comparable {
 	public int compareTo(Object o) {
 		// TODO Auto-generated method stub
 		if (o instanceof Book book) {
-			return this.price - book.price;
+			// return this.price - book.price;
+			return book.price - this.price;
 		}
 		return -999999;
 	}
