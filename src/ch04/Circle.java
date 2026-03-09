@@ -1,6 +1,6 @@
 package ch04;
 
-public class Circle {
+public class Circle implements Comparable {
 	// 추가적 요구사항 - 반지름이 10 으로 생성되도록 생성자를 추가해줘 (v 1.0)
 	// v2.0 추가 요구사항 - 내가 생성하고 싶은 반지름을 매개변수로 전달하면 그 값을 이용해서 반지름을 생성해줘
 
@@ -37,4 +37,11 @@ public class Circle {
 	double getArea() { // 넓이 구하는 공식
 		return PI * radius * radius;
 	}
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

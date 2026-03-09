@@ -51,11 +51,11 @@ interface RemoteControllable extends Controllable {
 	void remoteOff();
 }
 
-class TV implements Controllable, RemoteControllable {
+class TV implements RemoteControllable { // Controllable 을 상속받았기 때문에 RemoteControllable 만 구현해도 됨.
 
 	@Override
 	public void turnOn() {
-		System.out.println("TV를 켜다.");// TODO Auto-generated method stub
+		System.out.println("TV를 켜다.");
 
 	}
 
