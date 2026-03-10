@@ -7,6 +7,13 @@ public class EntryDemo {
 		String name = e.getKey();
 		int age = e.getValue();
 		System.out.println(name + " : " + age);
+
+		Entry<String, String> e1 = new Entry<>("김선달", "20");
+
+		Entry<Integer, Integer> e2 = new Entry<>(20, 20);
+
+		Entry e3 = new Entry("a", "b");
+
 	}
 
 }
