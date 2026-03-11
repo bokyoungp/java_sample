@@ -16,6 +16,14 @@ public class GenericDemo {
 //
 //		cup.setBeverage(new Circle());
 //		Object circle = cup.getBeverage();
+
+		genericMethod(100);
+		genericMethod("hello");
+
+	}
+
+	public static <T> void genericMethod(T data) {
+		System.out.println(data);
 	}
 
 }
@@ -29,6 +37,10 @@ class Cup<T> {
 
 	public void setBeverage(T beverage) {
 		this.beverage = beverage;
+	}
+
+	public <T> void any(T any) {
+
 	}
 
 }
