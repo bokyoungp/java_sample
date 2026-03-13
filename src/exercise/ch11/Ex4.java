@@ -27,6 +27,7 @@ public class Ex4 {
 				}
 			} catch (Exception e) {
 				System.out.println("입력 오류입니다. 다시 입력해주세요.");
+				// in.nextLine();
 			}
 
 		}
