@@ -87,7 +87,6 @@ class Cook implements Runnable {
 		// TODO Auto-generated method stub
 		for (int i = 0; i < 3; i++) {
 			try {
-
 				cook();
 				Thread.sleep(500);
 
