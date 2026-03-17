@@ -24,6 +24,23 @@ public class SLinkedList<E> {
 
 	}
 
+	E get(int index) {
+		if (index == 0) {
+			return head.item;
+		}
+		return getNode(index).item;
+	}
+
+	Node<E> getNode(int index) {
+		Node<E> find = head;
+		// System.out.println(find.item);
+		for (int i = 0; i < index; i++) {
+			// System.out.println(find.item);
+			find = find.next;
+		}
+		return find;
+	}
+
 	void addFirst(E item) {
 		// 1단계 : 새로운 노드를 생성한 후 node의 값을 설정한다음
 		// 새로 생성된 노드가 맨 앞으로 가도록 한다.
@@ -33,9 +50,9 @@ public class SLinkedList<E> {
 		// head 와 tail 모두 newNode 가 되도록 처리한다.
 		// 리스트에 데이터가 있을 경우에는 head 만 새로 추가된 노드로 변경해준다.
 		// < === 2) 여기를 구현한다.
-		if (size == 0) {
-			tail = newNode;
-		}
+//		if (size == 0) {
+//			tail = newNode;
+//		}
 		head = newNode;
 		// 3단계
 		// 데이터가 하나 추가되었기 때문에 리스트의 사이즈를 하나 증가시킨다.
@@ -44,12 +61,12 @@ public class SLinkedList<E> {
 	}
 
 	E remove() { // removeFirst()
-		Node<E> removedNode = head;
-		head = head.next;
+		Node<E> removedNode = head; // 지워질 노드를 먼저 저장한다.
+		head = head.next; //
 		removedNode.next = null;
-		if (size == 1) {
-			head = tail = null;
-		}
+//		if (size == 1) {
+//			head = tail = null;
+//		}
 		size--;
 		return removedNode.item;
 	}
