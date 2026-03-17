@@ -51,6 +51,15 @@ public class ArrList<E> {
 
 	@Override
 	public 반환값 toString() {
-
+		String list = "";
+		for (int i = 0; i < size; i++) {
+			if (i == size - 1) {
+				list += a[i];
+			} else {
+				list += a[i] + ",";
+			}
+		}
+		return "ArrList : [" + list + "]";
 	}
+
 }
