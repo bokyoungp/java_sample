@@ -17,13 +17,15 @@ public class SynchronizedDemo {
 }
 
 class SharedCar {
-	public synchronized void drive(String driver, String where) {
-		System.out.println(driver + "가 자동차에 탔습니다.");
-		Random r = new Random();
-		for (int i = 0; i < r.nextInt(1, 4); i++) {
-			System.out.println(driver + "가 자동차에 운전합니다.");
+	public void drive(String driver, String where) {
+		synchronized (this) { // 객체 기반 동기화
+			System.out.println(driver + "가 자동차에 탔습니다.");
+			Random r = new Random();
+			for (int i = 0; i < r.nextInt(1, 4); i++) {
+				System.out.println(driver + "가 자동차에 운전합니다.");
+			}
+			System.out.println(driver + "가 " + where + "에 도착했습니다.");
 		}
-		System.out.println(driver + "가 " + where + "에 도착했습니다.");
 	}
 }
 
