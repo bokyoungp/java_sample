@@ -14,7 +14,7 @@ public class SLinkedListDemo {
 		System.out.println(list);
 		System.out.println(list.size());
 
-		System.out.println(list.get(1));
+		System.out.println(list.get(2));
 
 		System.out.println(list.remove() + "가 삭제되었습니다.");
 
@@ -25,8 +25,8 @@ public class SLinkedListDemo {
 		list.remove();
 
 		System.out.println(list);
-//
-//		System.out.println(list.isEmpty());
+
+		System.out.println(list.isEmpty());
 
 	}
 

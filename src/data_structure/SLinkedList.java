@@ -13,6 +13,10 @@ public class SLinkedList<E> {
 		return size;
 	}
 
+	public boolean isEmpty() {
+		return size == 0;
+	}
+
 	private class Node<E> {
 		E item;
 		Node<E> next;
