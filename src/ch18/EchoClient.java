@@ -15,7 +15,7 @@ public class EchoClient {
 		try {
 			client = new Socket();
 			System.out.println("에코 서버와 연결 시도.....");
-			client.connect(new InetSocketAddress("192.168.0.37", 5000), 3000);
+			client.connect(new InetSocketAddress("192.168.0.57", 5000), 3000);
 			System.out.println("에코 서버와 연결 성공.....");
 		} catch (Exception e) {
 		}
